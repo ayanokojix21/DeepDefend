@@ -21,7 +21,7 @@ class TimelineGenerator:
                 'end': round(end_time, 2),
                 'interval': f"{start_time:.1f}-{end_time:.1f}",
                 'duration': round(end_time - start_time, 2),
-                'video_data': None,  
+                'video_data': [],  
                 'audio_data': None,  
                 'video_results': None,  
                 'audio_results': None
