@@ -14,8 +14,6 @@ class VideoAnalyzer:
         self.device = model_loader.get_device()
         
         self.face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-        self.eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml')
-        self.mouth_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_smile.xml')
     
     def detect_face(self, frame: np.ndarray) -> Dict:
         """Detect face and facial features"""
@@ -27,22 +25,17 @@ class VideoAnalyzer:
             face_crop = frame[y:y+h, x:x+w]
             
             gray_face = gray[y:y+h, x:x+w]
-            eyes = self.eye_cascade.detectMultiScale(gray_face, 1.1, 5)
             
             return {
                 'detected': True,
                 'bbox': {'x': int(x), 'y': int(y), 'w': int(w), 'h': int(h)},
-                'face_crop': face_crop,
-                'eyes_detected': len(eyes),
-                'has_eyes': len(eyes) >= 2
+                'face_crop': face_crop
             }
         
         return {
             'detected': False, 
             'bbox': None, 
-            'face_crop': None,
-            'eyes_detected': 0,
-            'has_eyes': False
+            'face_crop': None
         }
     
     def predict_deepfake(self, frame: np.ndarray) -> Dict:
@@ -242,7 +235,6 @@ class VideoAnalyzer:
                 'fake_score': pred['fake_score'],
                 'confidence': pred['confidence'],
                 'face_detected': face_info['detected'],
-                'eyes_detected': face_info.get('eyes_detected', 0),
                 'regions': regions['regions'],
                 'heatmap_intensity': regions.get('heatmap_intensity', 0.0)
             })
