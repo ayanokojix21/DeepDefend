@@ -34,6 +34,9 @@ class MediaExtractor:
         
         cap = cv2.VideoCapture(video_path)
         
+        if not cap.isOpened():
+            raise ValueError(f"Cannot open video: {video_path}")
+        
         for interval in timeline:
             
             sample_times = np.linspace(
@@ -69,8 +72,15 @@ class MediaExtractor:
         
         try:
             subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+            
         except subprocess.CalledProcessError:
-            raise ValueError(f"Audio extraction failed for {video_path}")
+            for interval in timeline:
+                interval['audio_data'] = {
+                    'audio': np.zeros(16000 * 2),  
+                    'sample_rate': 16000,
+                    'has_audio': False
+                }
+            return timeline
         
         audio, sr = librosa.load(temp_audio, sr=16000, mono=True)
         
@@ -84,7 +94,8 @@ class MediaExtractor:
             
             interval['audio_data'] = {
                 'audio': audio_chunk,
-                'sample_rate': sr
+                'sample_rate': sr,
+                'has_audio': True
             }
         
         if os.path.exists(temp_audio):
