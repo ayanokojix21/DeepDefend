@@ -18,7 +18,7 @@ def download_models():
     print("Video model saved to ./models/video_model")
     
     print("\nDownloading audio deepfake detection model...")
-    audio_model_name = "Hemgg/Deepfake-audio-detection" 
+    audio_model_name = "mo-thecreator/Deepfake-audio-detection" 
     
     audio_model = AutoModelForAudioClassification.from_pretrained(audio_model_name)
     audio_processor = AutoFeatureExtractor.from_pretrained(audio_model_name)

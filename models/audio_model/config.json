@@ -57,14 +57,14 @@
   "hidden_dropout": 0.1,
   "hidden_size": 768,
   "id2label": {
-    "0": "AIVoice",
-    "1": "HumanVoice"
+    "0": "fake",
+    "1": "real"
   },
   "initializer_range": 0.02,
   "intermediate_size": 3072,
   "label2id": {
-    "AIVoice": "0",
-    "HumanVoice": "1"
+    "fake": "0",
+    "real": "1"
   },
   "layer_norm_eps": 1e-05,
   "layerdrop": 0.0,
