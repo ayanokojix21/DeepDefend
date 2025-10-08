@@ -43,9 +43,19 @@ class LLMFusion:
         overall_video = round(sum(video_scores) / len(video_scores), 3) if len(video_scores) > 0 else 0.0
         overall_audio = round(sum(audio_scores) / len(audio_scores), 3) if len(audio_scores) > 0 else 0.0
         
+        if overall_video > 0 and overall_audio > 0:
+            overall_combined = round((overall_video + overall_audio) / 2, 3)
+        elif overall_video > 0:
+            overall_combined = overall_video
+        elif overall_audio > 0:
+            overall_combined = overall_audio
+        else:
+            overall_combined = 0.0
+        
         return {
             'overall_video_score': overall_video,
-            'overall_audio_score': overall_audio
+            'overall_audio_score': overall_audio,
+            'overall_combined_score': overall_combined
         }
     
     def generate_report(self, timeline: List[Dict], video_info: Dict) -> Dict:
@@ -67,10 +77,7 @@ class LLMFusion:
     def _structure_report(self, llm_response: str, overall_scores: Dict, analysis_json: Dict) -> Dict:
         """Extract structured information from LLM response"""
         
-        verdict = "REAL"
-        verdict_match = re.search(r'VERDICT\s*:\s*(REAL|DEEPFAKE)', llm_response, re.IGNORECASE)
-        if verdict_match:
-            verdict = verdict_match.group(1).upper()
+        verdict = "DEEPFAKE" if overall_scores['overall_combined_score'] > 0.5 else "REAL"
         
         confidence = 75.0
         conf_match = re.search(r'(\d+)\s*%', llm_response)
