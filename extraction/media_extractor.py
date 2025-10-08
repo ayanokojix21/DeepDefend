@@ -72,8 +72,12 @@ class MediaExtractor:
         
         try:
             subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-            
+            has_audio = os.path.exists(temp_audio) and os.path.getsize(temp_audio) > 0
         except subprocess.CalledProcessError:
+            has_audio = False
+        
+        if not has_audio:
+            print("Warning: No audio track detected in video")
             for interval in timeline:
                 interval['audio_data'] = {
                     'audio': np.zeros(16000 * 2),  
@@ -87,6 +91,7 @@ class MediaExtractor:
         for interval in timeline:
             start_sample = int(interval['start'] * sr)
             end_sample = int(interval['end'] * sr)
+            end_sample = min(end_sample, len(audio))
             audio_chunk = audio[start_sample:end_sample]
             
             if len(audio_chunk) < sr * 0.5:
@@ -111,7 +116,7 @@ class MediaExtractor:
         timeline_gen = TimelineGenerator(interval_duration)
         timeline = timeline_gen.create_timeline(video_info['duration'])
         
-        self.extract_frames(video_path, timeline)
-        self.extract_audio(video_path, timeline)
+        timeline = self.extract_frames(video_path, timeline)  
+        timeline = self.extract_audio(video_path, timeline)
         
         return timeline, video_info
