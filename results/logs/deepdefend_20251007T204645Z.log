@@ -1,0 +1,12 @@
+2025-10-07 14:46:45,321 - INFO - Starting analysis for: C:\Users\iamru\Downloads\Prashant_Indian_Dance_Video_Generation.mp4
+2025-10-07 14:47:00,690 - INFO - Video duration: 7.79s, fps: 24.00, total_frames: 187
+2025-10-07 14:47:00,691 - DEBUG - Processing interval 0 0.0-2.0
+2025-10-07 14:47:02,332 - DEBUG - Processing interval 1 2.0-4.0
+2025-10-07 14:47:03,177 - DEBUG - Processing interval 2 4.0-6.0
+2025-10-07 14:47:03,942 - DEBUG - Processing interval 3 6.0-7.8
+2025-10-07 14:47:04,695 - INFO - Analysis complete. Results saved to: C:\Users\iamru\OneDrive\Desktop\Projects-ML\DeepDefend\results\Prashant_Indian_Dance_Video_Generation_analysis.json
+2025-10-07 14:47:04,695 - INFO - Log file: C:\Users\iamru\OneDrive\Desktop\Projects-ML\DeepDefend\results\logs\deepdefend_20251007T204645Z.log
+2025-10-07 14:47:04,696 - INFO - Interval 0 0.0-2.0: fake_score=0.598, confidence=0.997, face_detected=True, suspicious_regions=['Unable to generate heatmap', 'no_face_detected']
+2025-10-07 14:47:04,696 - INFO - Interval 1 2.0-4.0: fake_score=0.682, confidence=0.882, face_detected=True, suspicious_regions=['Unable to generate heatmap']
+2025-10-07 14:47:04,696 - INFO - Interval 2 4.0-6.0: fake_score=0.751, confidence=0.951, face_detected=True, suspicious_regions=['Unable to generate heatmap']
+2025-10-07 14:47:04,696 - INFO - Interval 3 6.0-7.8: fake_score=0.77, confidence=0.97, face_detected=True, suspicious_regions=['Unable to generate heatmap']

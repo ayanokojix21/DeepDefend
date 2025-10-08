@@ -1,0 +1,288 @@
+{
+  "video_path": "C:\\Users\\iamru\\Downloads\\Prashant_Indian_Dance_Video_Generation.mp4",
+  "analyzed_at": "2025-10-07T20:47:04.693293Z",
+  "video_info": {
+    "fps": 24.0,
+    "total_frames": 187,
+    "duration": 7.791666666666667
+  },
+  "interval_results": [
+    {
+      "interval_id": 0,
+      "interval": "0.0-2.0",
+      "fake_score": 0.598,
+      "confidence": 0.997,
+      "suspicious_regions": [
+        "Unable to generate heatmap",
+        "no_face_detected"
+      ],
+      "face_detected": true,
+      "frame_count": 5,
+      "frames_with_faces": 3,
+      "avg_heatmap_intensity": 0.0,
+      "frame_results": [
+        {
+          "timestamp": 0.0,
+          "fake_score": 0.998,
+          "confidence": 0.998,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 0.4,
+          "fake_score": 0.997,
+          "confidence": 0.997,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 0.8,
+          "fake_score": 0.993,
+          "confidence": 0.993,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 1.2,
+          "fake_score": 0.001,
+          "confidence": 0.999,
+          "face_detected": false,
+          "regions": [
+            "no_face_detected"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 1.6,
+          "fake_score": 0.001,
+          "confidence": 0.999,
+          "face_detected": false,
+          "regions": [
+            "no_face_detected"
+          ],
+          "heatmap_intensity": 0.0
+        }
+      ],
+      "region_frequency": {
+        "Unable to generate heatmap": 3,
+        "no_face_detected": 2
+      }
+    },
+    {
+      "interval_id": 1,
+      "interval": "2.0-4.0",
+      "fake_score": 0.682,
+      "confidence": 0.882,
+      "suspicious_regions": [
+        "Unable to generate heatmap"
+      ],
+      "face_detected": true,
+      "frame_count": 5,
+      "frames_with_faces": 4,
+      "avg_heatmap_intensity": 0.0,
+      "frame_results": [
+        {
+          "timestamp": 2.0,
+          "fake_score": 0.001,
+          "confidence": 0.999,
+          "face_detected": false,
+          "regions": [
+            "no_face_detected"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 2.4,
+          "fake_score": 0.912,
+          "confidence": 0.912,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 2.8,
+          "fake_score": 0.877,
+          "confidence": 0.877,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 3.2,
+          "fake_score": 0.692,
+          "confidence": 0.692,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 3.6,
+          "fake_score": 0.929,
+          "confidence": 0.929,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        }
+      ],
+      "region_frequency": {
+        "no_face_detected": 1,
+        "Unable to generate heatmap": 4
+      }
+    },
+    {
+      "interval_id": 2,
+      "interval": "4.0-6.0",
+      "fake_score": 0.751,
+      "confidence": 0.951,
+      "suspicious_regions": [
+        "Unable to generate heatmap"
+      ],
+      "face_detected": true,
+      "frame_count": 5,
+      "frames_with_faces": 4,
+      "avg_heatmap_intensity": 0.0,
+      "frame_results": [
+        {
+          "timestamp": 4.0,
+          "fake_score": 0.001,
+          "confidence": 0.999,
+          "face_detected": false,
+          "regions": [
+            "no_face_detected"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 4.4,
+          "fake_score": 0.933,
+          "confidence": 0.933,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 4.8,
+          "fake_score": 0.975,
+          "confidence": 0.975,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 5.2,
+          "fake_score": 0.925,
+          "confidence": 0.925,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 5.6,
+          "fake_score": 0.923,
+          "confidence": 0.923,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        }
+      ],
+      "region_frequency": {
+        "no_face_detected": 1,
+        "Unable to generate heatmap": 4
+      }
+    },
+    {
+      "interval_id": 3,
+      "interval": "6.0-7.8",
+      "fake_score": 0.77,
+      "confidence": 0.97,
+      "suspicious_regions": [
+        "Unable to generate heatmap"
+      ],
+      "face_detected": true,
+      "frame_count": 5,
+      "frames_with_faces": 4,
+      "avg_heatmap_intensity": 0.0,
+      "frame_results": [
+        {
+          "timestamp": 6.0,
+          "fake_score": 0.98,
+          "confidence": 0.98,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 6.36,
+          "fake_score": 0.973,
+          "confidence": 0.973,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 6.72,
+          "fake_score": 0.001,
+          "confidence": 0.999,
+          "face_detected": false,
+          "regions": [
+            "no_face_detected"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 7.07,
+          "fake_score": 0.899,
+          "confidence": 0.899,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        },
+        {
+          "timestamp": 7.43,
+          "fake_score": 0.998,
+          "confidence": 0.998,
+          "face_detected": true,
+          "regions": [
+            "Unable to generate heatmap"
+          ],
+          "heatmap_intensity": 0.0
+        }
+      ],
+      "region_frequency": {
+        "Unable to generate heatmap": 4,
+        "no_face_detected": 1
+      }
+    }
+  ]
+}

@@ -3,6 +3,8 @@ import cv2
 import librosa
 import subprocess
 import numpy as np
+import shutil
+import logging
 from typing import List, Dict, Tuple
 from extraction.timeline_generator import TimelineGenerator
 
@@ -61,7 +63,18 @@ class MediaExtractor:
         return timeline
     
     def extract_audio(self, video_path: str, timeline: List[Dict]) -> List[Dict]:
-        
+        # Check if ffmpeg is available on PATH. If not, skip audio extraction gracefully.
+        logger = logging.getLogger(__name__)
+        if shutil.which('ffmpeg') is None:
+            logger.warning('ffmpeg not found on PATH - skipping audio extraction. Install ffmpeg to enable audio processing.')
+            for interval in timeline:
+                interval['audio_data'] = {
+                    'audio': np.zeros(16000 * 2),  
+                    'sample_rate': 16000,
+                    'has_audio': False
+                }
+            return timeline
+
         temp_audio = "temp_audio.wav"
         command = [
             'ffmpeg', '-i', video_path,
@@ -69,10 +82,10 @@ class MediaExtractor:
             '-ar', '16000', '-ac', '1',
             '-y', temp_audio
         ]
-        
+
         try:
             subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-            
+
         except subprocess.CalledProcessError:
             for interval in timeline:
                 interval['audio_data'] = {
