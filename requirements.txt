@@ -26,13 +26,13 @@ uvicorn>=0.23.0
 python-multipart>=0.0.6
 
 # Data & Visualization
-numpy>=1.24.0
+numpy<2
 pandas>=2.0.0
 matplotlib>=3.7.0
 plotly>=5.17.0
 
 # LLM Integration
-
+langchain-google-genai
 
 # Utilities
 requests>=2.31.0
