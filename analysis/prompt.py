@@ -13,6 +13,7 @@ VIDEO INFORMATION:
 OVERALL SCORES (CRITICAL - READ CAREFULLY):
 - Video Deepfake Score: {overall_scores['overall_video_score']}
 - Audio Deepfake Score: {overall_scores['overall_audio_score']}
+- Averaged Combined Score: {overall_scores['overall_combined_score']}
 
 SCORE INTERPRETATION GUIDE:
 - Scores range from 0.0 to 1.0
