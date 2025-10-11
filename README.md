@@ -4,7 +4,7 @@
 > Detect AI-generated deepfakes in videos using computer vision and audio analysis
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.109.0-009688.svg)](https://fastapi.tiangolo.com)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.5-009688.svg)](https://fastapi.tiangolo.com)
 
 ## Overview
 
@@ -74,8 +74,8 @@ Video Input
 ## Demo
 
 ### Live Demo
-**API**: [https://deepdefend-api.hf.space](https://deepdefend-api.hf.space)  
-**Docs**: [https://deepdefend-api.hf.space/docs](https://deepdefend-api.hf.space/docs)
+**API**: [https://deepdefend-api.hf.space](https://huggingface.co/spaces/nishchandel/deepdefend-api)  
+**Docs**: [https://deepdefend-api.hf.space/docs](https://nishchandel-deepdefend-api.hf.space/docs)
 
 ### Example Analysis
 
