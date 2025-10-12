@@ -1,10 +1,15 @@
+import os
+os.environ['HF_HOME'] = '/tmp/hf_home'
+os.environ['LIBROSA_CACHE_DIR'] = '/tmp'
+os.environ['JOBLIB_TEMP_FOLDER'] = '/tmp'
+os.environ['NUMBA_CACHE_DIR'] = '/tmp'
+
 from fastapi import FastAPI, File, UploadFile, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from typing import List
 from contextlib import asynccontextmanager
-import os
 import uuid
 import shutil
 import json
@@ -34,8 +39,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-UPLOAD_DIR = Path("uploads")
-UPLOAD_DIR.mkdir(exist_ok=True)
+UPLOAD_DIR = Path("/tmp/deepdefend_uploads")
+UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 pipeline = None
 

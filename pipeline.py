@@ -1,3 +1,8 @@
+import os
+os.environ['LIBROSA_CACHE_DIR'] = '/tmp'
+os.environ['JOBLIB_TEMP_FOLDER'] = '/tmp'
+os.environ['NUMBA_CACHE_DIR'] = '/tmp'
+
 from typing import Dict
 from extraction.media_extractor import MediaExtractor
 from analysis.video_analyser import VideoAnalyzer

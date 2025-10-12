@@ -18,7 +18,7 @@ COPY . .
 
 RUN mkdir -p uploads models/video_model models/audio_model
 
-RUN python download_model.py
+RUN python models/download_model.py
 
 EXPOSE 7860
 
