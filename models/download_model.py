@@ -8,7 +8,7 @@ def download_models():
     os.makedirs("./models/audio_model", exist_ok=True)
     
     print("Downloading video deepfake detection model...")
-    video_model_name = "dima806/deepfake_vs_real_image_detection"
+    video_model_name = "rushild25/DeepDefend"
     
     video_model = AutoModelForImageClassification.from_pretrained(video_model_name)
     video_processor = AutoImageProcessor.from_pretrained(video_model_name)
