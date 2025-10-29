@@ -183,7 +183,7 @@ docker run -p 8000:8000 -e GOOGLE_API_KEY=your_key deepdefend
 - **Transformers**: Hugging Face Transformers 4.36.2
 
 ### ML Models
-- **Video Detection**: [dima806/deepfake_vs_real_image_detection](https://huggingface.co/dima806/deepfake_vs_real_image_detection)
+- **Video Detection**: [rushild25/DeepDefend](https://huggingface.co/rushild25/DeepDefend)
 - **Audio Detection**: [mo-thecreator/Deepfake-audio-detection](https://huggingface.co/mo-thecreator/Deepfake-audio-detection)
 - **LLM Fusion**: Google Gemini 2.5 Flash
 
