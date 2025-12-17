@@ -175,7 +175,10 @@ docker run -p 8000:8000 -e GOOGLE_API_KEY=your_key deepdefend
 ```
 
 ## Tech Stack
-
+### Frontend
+- **Frameworks** : Next.js
+- **Code** : [nu11Orbit/DeepDefend](https://github.com/nu11Orbit/DeepDefend)
+  
 ### Backend
 - **Framework**: FastAPI 0.109.0
 - **Server**: Uvicorn
